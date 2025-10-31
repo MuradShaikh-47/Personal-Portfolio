@@ -85,7 +85,7 @@ export const Navbar = () => {
           </a>
         ))}
 
-         <button
+         {/* <button
           onClick={toggleTheme}
           className="p-3 rounded-full transition-colors duration-300 hover:bg-foreground/10 mt-6"
         >
@@ -94,7 +94,7 @@ export const Navbar = () => {
           ) : (
             <Moon className="h-6 w-6 text-blue-900" />
           )}
-        </button>
+        </button> */}
       </div>
     </>
   );
