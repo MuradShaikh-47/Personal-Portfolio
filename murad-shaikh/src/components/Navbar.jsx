@@ -84,6 +84,17 @@ export const Navbar = () => {
             {item.name}
           </a>
         ))}
+
+         <button
+          onClick={toggleTheme}
+          className="p-3 rounded-full transition-colors duration-300 hover:bg-foreground/10 mt-6"
+        >
+          {isDarkMode ? (
+            <Sun className="h-6 w-6 text-yellow-300" />
+          ) : (
+            <Moon className="h-6 w-6 text-blue-900" />
+          )}
+        </button>
       </div>
     </>
   );
