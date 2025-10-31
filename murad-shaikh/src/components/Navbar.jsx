@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
-
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -44,7 +43,7 @@ export const Navbar = () => {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, key) => (
               <a
                 key={key}
@@ -54,9 +53,10 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            {/* ✅ Only one Theme Toggle here */}
+            <ThemeToggle />
           </div>
 
-            <ThemeToggle/>
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -77,6 +77,7 @@ export const Navbar = () => {
             : "opacity-0 pointer-events-none z-40"
         )}
       >
+        <ThemeToggle />
         {navItems.map((item, key) => (
           <a
             key={key}
@@ -87,8 +88,7 @@ export const Navbar = () => {
             {item.name}
           </a>
         ))}
-
-       <ThemeToggle/>
+       
       </div>
     </>
   );
