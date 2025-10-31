@@ -53,7 +53,7 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            {/* ✅ Only one Theme Toggle here */}
+
             <ThemeToggle />
           </div>
 
