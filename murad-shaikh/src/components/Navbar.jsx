@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
+
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -54,6 +56,7 @@ export const Navbar = () => {
             ))}
           </div>
 
+            <ThemeToggle/>
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -85,16 +88,7 @@ export const Navbar = () => {
           </a>
         ))}
 
-         {/* <button
-          onClick={toggleTheme}
-          className="p-3 rounded-full transition-colors duration-300 hover:bg-foreground/10 mt-6"
-        >
-          {isDarkMode ? (
-            <Sun className="h-6 w-6 text-yellow-300" />
-          ) : (
-            <Moon className="h-6 w-6 text-blue-900" />
-          )}
-        </button> */}
+       <ThemeToggle/>
       </div>
     </>
   );
